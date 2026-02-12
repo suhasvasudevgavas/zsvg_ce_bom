@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for custom entity - BOM'
+define service Zsvg_ce_sd_bom {
+  expose zsvg_ce_bom;
+}

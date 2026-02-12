@@ -1,0 +1,35 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: { typeName: 'BOM',
+                  typeNamePlural: 'BOMs',
+                  title: { label: 'BOM', type: #STANDARD, value: 'BillOfMaterial' } }
+
+annotate entity zsvg_ce_bom
+    with
+
+{
+  @UI.facet: [ { id: 'bom',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label: 'BOM',
+                 type: #IDENTIFICATION_REFERENCE } ]
+  @UI.identification: [ { position: 10, label: 'BillOfMaterial' } ]
+  @UI.lineItem: [ { position: 10, label: 'BillOfMaterial' } ]
+  BillOfMaterial;
+
+  @UI.identification: [ { position: 20, label: 'Material' } ]
+  @UI.lineItem: [ { position: 20, label: 'Material' } ]
+  Material;
+
+  @UI.identification: [ { position: 30, label: 'Plant' } ]
+  @UI.lineItem: [ { position: 30, label: 'Plant' } ]
+  Plant;
+
+  @UI.identification: [ { position: 40, label: 'BillOfMaterialVariantUsage' } ]
+  @UI.lineItem: [ { position: 40, label: 'BillOfMaterialVariantUsage' } ]
+  BillOfMaterialVariantUsage;
+
+  @UI.identification: [ { position: 50, label: 'BillOfMaterialVariant' } ]
+  @UI.lineItem: [ { position: 50, label: 'BillOfMaterialVariant' } ]
+  BillOfMaterialVariant;
+}
