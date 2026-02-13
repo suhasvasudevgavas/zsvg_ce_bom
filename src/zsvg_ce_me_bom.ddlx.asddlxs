@@ -12,24 +12,42 @@ annotate entity zsvg_ce_bom
                  purpose: #STANDARD,
                  position: 10,
                  label: 'BOM',
-                 type: #IDENTIFICATION_REFERENCE } ]
+                 type: #IDENTIFICATION_REFERENCE },
+               { id: 'bomitem',
+                 purpose: #STANDARD,
+                 position: 20,
+                 label: 'BOM ITEM',
+                 type: #LINEITEM_REFERENCE,
+                 targetElement: '_bomitem' } ]
+  @UI.identification: [ { position: 05, label: 'BillOfMaterialHeaderUUID' } ]
+  @UI.lineItem: [ { position: 05, label: 'BillOfMaterialHeaderUUID' } ]
+  BillOfMaterialHeaderUUID;
+
   @UI.identification: [ { position: 10, label: 'BillOfMaterial' } ]
   @UI.lineItem: [ { position: 10, label: 'BillOfMaterial' } ]
   BillOfMaterial;
 
-  @UI.identification: [ { position: 20, label: 'Material' } ]
-  @UI.lineItem: [ { position: 20, label: 'Material' } ]
+  @UI.identification: [ { position: 20, label: 'BillOfMaterialCategory' } ]
+  @UI.lineItem: [ { position: 20, label: 'BillOfMaterialCategory' } ]
+  BillOfMaterialCategory;
+
+  @UI.identification: [ { position: 30, label: 'BillOfMaterialVariant' } ]
+  @UI.lineItem: [ { position: 30, label: 'BillOfMaterialVariant' } ]
+  BillOfMaterialVariant;
+
+  @UI.identification: [ { position: 40, label: 'BillOfMaterialVersion' } ]
+  @UI.lineItem: [ { position: 40, label: 'BillOfMaterialVersion' } ]
+  BillOfMaterialVersion;
+
+  @UI.identification: [ { position: 50, label: 'EngineeringChangeDocument' } ]
+  @UI.lineItem: [ { position: 50, label: 'EngineeringChangeDocument' } ]
+  EngineeringChangeDocument;
+
+  @UI.identification: [ { position: 60, label: 'Material' } ]
+  @UI.lineItem: [ { position: 60, label: 'Material' } ]
   Material;
 
-  @UI.identification: [ { position: 30, label: 'Plant' } ]
-  @UI.lineItem: [ { position: 30, label: 'Plant' } ]
+  @UI.identification: [ { position: 70, label: 'Plant' } ]
+  @UI.lineItem: [ { position: 70, label: 'Plant' } ]
   Plant;
-
-  @UI.identification: [ { position: 40, label: 'BillOfMaterialVariantUsage' } ]
-  @UI.lineItem: [ { position: 40, label: 'BillOfMaterialVariantUsage' } ]
-  BillOfMaterialVariantUsage;
-
-  @UI.identification: [ { position: 50, label: 'BillOfMaterialVariant' } ]
-  @UI.lineItem: [ { position: 50, label: 'BillOfMaterialVariant' } ]
-  BillOfMaterialVariant;
 }

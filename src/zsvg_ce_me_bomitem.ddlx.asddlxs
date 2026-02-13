@@ -1,0 +1,43 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: { typeName: 'BOMITEM',
+                  typeNamePlural: 'BOM ITEMs',
+                  title: { label: 'BOM', type: #STANDARD, value: 'BillOfMaterialComponent' } }
+
+annotate entity zsvg_ce_bomitem
+    with
+
+{
+  @UI.facet: [ { id: 'bomitem',
+                 purpose: #STANDARD,
+                 position: 10,
+                 label: 'BOMITEM',
+                 type: #IDENTIFICATION_REFERENCE } ]
+  @UI.identification: [ { position: 05, label: 'BillOfMaterialItemUUID' } ]
+  @UI.lineItem: [ { position: 05, label: 'BillOfMaterialItemUUID' } ]
+  BillOfMaterialItemUUID;
+
+  @UI.identification: [ { position: 10, label: 'BillOfMaterialHeaderUUID' } ]
+  @UI.lineItem: [ { position: 10, label: 'BillOfMaterialHeaderUUID' } ]
+  BillOfMaterialHeaderUUID;
+
+  @UI.identification: [ { position: 50, label: 'BillOfMaterialComponent' } ]
+  @UI.lineItem: [ { position: 50, label: 'BillOfMaterialComponent' } ]
+  BillOfMaterialComponent;
+
+  @UI.identification: [ { position: 60, label: 'BillOfMaterialItemCategory' } ]
+  @UI.lineItem: [ { position: 60, label: 'BillOfMaterialItemCategory' } ]
+  BillOfMaterialItemCategory;
+
+  @UI.identification: [ { position: 70, label: 'BillOfMaterialItemNumber' } ]
+  @UI.lineItem: [ { position: 70, label: 'BillOfMaterialItemNumber' } ]
+  BillOfMaterialItemNumber;
+
+  @UI.identification: [ { position: 80, label: 'BillOfMaterialItemUnit' } ]
+  @UI.lineItem: [ { position: 80, label: 'BillOfMaterialItemUnit' } ]
+  BillOfMaterialItemUnit;
+
+  @UI.identification: [ { position: 80, label: 'BillOfMaterialItemQuantity' } ]
+  @UI.lineItem: [ { position: 80, label: 'BillOfMaterialItemQuantity' } ]
+  BillOfMaterialItemQuantity;
+}
